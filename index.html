@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bgimage">
+        <h1>Sign up to get 50% off online shopping</h1>
+
+        <script>
+            function output(){
+                var name=document.getElementById("name").value;
+                var username=document.getElementById("username").value;
+                var password=document.getElementById("password").value;
+                var email=document.getElementById("email").value;
+                var gender=document.getElementById("gender").value;
+                var sexuality=document.getElementById("sexuality").value;
+                var address=document.getElementById("address").value;
+                var medias=document.getElementById("medias").value;
+                
+                var br="<br>";
+    
+                document.getElementById("output").innerHTML= "Name:"+name+br+"Username:"+username+br+"Password:"+password+br+"Email:"+email+br+"Address:"+address+br+"Gender:"+gender+br+"Sexuality"+sexuality+br+"Medias:"+medias;
+                return;
+            }
+        </script>
+
+    <form id="form" onsubmit="return output()">
+        <legend>Add your information</legend>
+        <fieldset class="field">
+            <p>
+            <label for="name">
+                Enter your name: 
+            </label><br>
+            <input type="text" 
+                   id="name" 
+                   name="name" 
+                   placeholder="Enter your name:" required></input><br></p>
+            <p>
+            <label for="username">
+                Enter username: 
+            </label><br>
+            <input type="text" 
+                   id="username" 
+                   name="username" 
+                   placeholder="Enter username:" required></input><br></p>
+            <p>
+            <label for="password">
+                Enter a strong password: 
+            </label></label><br>
+            <input type="password" 
+                   id="password" 
+                   name="password" 
+                   placeholder="Enter a strong password:" required></input><br></p>
+            <p>
+            <label for="email">
+                Enter your email: 
+            </label><br>
+            <input type="email" 
+                   id="email" 
+                   name="email" 
+                   placeholder="Enter your email:" required></input><br></p>
+            <p>
+            <label for="gender">
+                Gender
+            </label><br>
+
+            <select name="gender" 
+                    id="gender"></p>
+
+            <option value="f">Female</option>
+            <option value="m">Male</option>
+            <option value="g">Genderqueer</option>
+            <option value="t">Transgender</option>
+            <option value="n">Nonbinary</option>
+            <option value="a">Agender</option>
+            <option value="mysteriousdaw">Secret 7th option</option>
+            </select><br>
+            <p>
+
+            <label for="sexuality">
+                Preference
+            </label><br>
+
+            <select name="sexuality" 
+                    id="sexuality"></p>
+             <option value="mff">Straight</option>
+             <option value="fff">Lesbian</option>
+             <option value="mfm">Gay</option>
+             <option value="tft">Trans4Trans</option>
+             <option value="bi">Bisexual</option>
+             <option value="aa">Aroace</option>
+             <option value="comingout">Prefer not to say</option>
+
+             </select><br>
+
+            <p>
+            <label for="username">
+                Address: 
+            </label><br>
+            <input type="text" 
+                   id="address" 
+                   name="address" 
+                   placeholder="Address:" required ></input><br></p>
+            <p>
+            <label for="username">
+                Quirks: 
+            </label><br>
+            <textarea type="text" 
+                      id="medias" 
+                      name="medias" 
+                      placeholder="Quirks:" required></textarea><br></p>
+            <p>
+            <button type="submit" value="Submit" class="submit">Submit</button>
+            <button type="reset" value="Reset" class="reset" onclick="reset()">Reset</button></p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Copy of your response</legend>
+            <div id="output"></div>
+        </fieldset>
+    </form>
+    </div>
+</body>
+</html>
